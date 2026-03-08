@@ -1,0 +1,24 @@
+# Cloudflare Pages — Cache Headers
+# Τοποθέτησε αυτό το αρχείο στον ROOT φάκελο του project (δίπλα στο index.html)
+
+# HTML — χωρίς cache (πάντα fresh)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Fonts — 1 χρόνο (αλλάζουν σπάνια)
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images — 1 χρόνο
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS & JS — 1 χρόνο
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
